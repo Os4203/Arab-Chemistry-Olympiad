@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arab Chemistry Olympiad - أولمبياد الكيمياء العربي</title>
+    <title>أولمبياد الكيمياء العربي العاشر - الأردن 2025</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
@@ -14,303 +14,413 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
+
   <body>
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
       <nav class="navbar">
         <div class="nav-container">
-          <div class="nav-logo">
-            <img
-              src="logo.jpg"
-              alt="Arab Chemistry Olympiad Logo"
-              class="logo"
-            />
-            <span>أولمبياد الكيمياء العربي</span>
+          <div class="nav-left">
+            <div class="nav-logo">
+              <a href="index.html">
+                <img
+                  src="Ministry of Education Logo-01.png"
+                  alt="Ministry of Education Logo"
+                  class="logo"
+                />
+                <span>Olympiad Chemistry Arab 10th</span>
+              </a>
+            </div>
           </div>
           <ul class="nav-menu">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about">حول</a></li>
-            <li><a href="subject.html">المحتوى العلمي</a></li>
-            <li><a href="#schedule">البرنامج</a></li>
-            <li><a href="#teams">الدول المشاركة</a></li>
-            <li><a href="#gallery">معرض الصور</a></li>
-            <li><a href="#registration">التسجيل</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle">حول الأولمبياد</a>
+              <div class="dropdown-content">
+                <a href="about.html">حول الأولمبياد</a>
+                <a href="organizer.html">المنظمون</a>
+                <a href="schedule.html">البرنامج</a>
+                <a href="participants.html">المشاركون</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">المسابقة</a>
+              <div class="dropdown-content">
+                <a href="registration.html">التسجيل</a>
+                <a href="gallery.html">صور</a>
+                <a href="results.html">النتائج والتصنيفات</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">المحتوى </a>
+              <div class="dropdown-content">
+                <a href="subject.html">المحتوى العلمي</a>
+                <a href="news.html">الأخبار</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">السفر والإقامة</a>
+              <div class="dropdown-content">
+                <a href="travel.html">تفاصيل السفر</a>
+                <a href="accommodation.html">أماكن الإقامة</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">تواصل معنا</a>
+              <div class="dropdown-content">
+                <a href="contact.html">تواصل معنا</a>
+              </div>
+            </li>
           </ul>
           <div class="hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
+          <div class="nav-ministry-logo">
+            <img
+              src="logo.png"
+              alt="Ministry of Education Logo"
+              class="ministry-logo"
+            />
+          </div>
         </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero-section">
       <div class="hero-background">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-          <h1>مرحباً بكم في أولمبياد الكيمياء العربي العاشر</h1>
-          <p>
-            يسرّنا أن نرحّب بكم في الموقع الرسمي لأولمبياد الكيمياء العربي
-            العاشر، الذي تستضيفه المملكة الأردنية الهاشمية بمشاركة نخبة من
-            الطلبة المتميزين من مختلف الدول العربية. يجمع هذا الحدث العلمي
-            الرفيع بين التميز الأكاديمي والتفاعل الثقافي، ويهدف إلى تحفيز
-            الإبداع العلمي لدى الشباب العربي في مجال الكيمياء، وتعزيز أواصر
-            التعاون بين المؤسسات التعليمية في وطننا العربي. تابعونا للاطلاع على
-            آخر المستجدات، ومواعيد الفعاليات، والتفاصيل الخاصة بالمشاركة.
+          <div class="container">
+            <div class="hero-text">
+              <h1 class="hero-title">الدورة العاشرة لأولمبياد</h1>
+              <h1 class="hero-title">الكيمياء العربي</h1>
+              <p class="hero-subtitle">
+                انضموا إلينا في المملكة الأردنية الهاشمية للمشاركة في أولمبياد الكيمياء العربي العاشر – حيث الذكاء يقتنص الفرص. في شهر أغسطس 2025، يجتمع العلماء الشباب من جميع أنحاء الوطن العربي لحل التحديات واستكشاف الابتكار والاحتفال بروح الاكتشاف.
+              </p>
+              <div class="hero-info">
+                <div class="info-grid">
+                  <div class="info-item" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important;">
+                    <h3 style="color: #ffd700 !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;">التاريخ</h3>
+                    <p style="color: white !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important; font-weight: 700 !important;">5 - 9 أغسطس 2025</p>
+                  </div>
+                  <div class="info-item" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important;">
+                    <h3 style="color: #ffd700 !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;">المشاركون</h3>
+                    <p style="color: white !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important; font-weight: 700 !important;">44 مشارك من 11 دولة عربية</p>
+                  </div>
+                  <div class="info-item" style="background: rgba(255, 255, 255, 0.15) !important; border: 2px solid rgba(255, 255, 255, 0.3) !important;">
+                    <h3 style="color: #ffd700 !important; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;">مقر انعقاد الأولمبياد</h3>
+                    <p style="color: white !important; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important; font-weight: 700 !important;">عمان، الأردن</p>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-buttons">
+                <a href="registration.html" class="btn btn-primary">سجِّل الآن</a>
+                <a href="schedule.html" class="btn btn-secondary">البرنامج</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Messages Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="welcome-grid">
+          <!-- Minister's Welcome -->
+          <div class="welcome-card">
+            <div class="welcome-content">
+              <h2>كلمة ترحيبية</h2>
+              <p>
+                نتشرف باستضافة المشاركين والمرشدين والضيوف في أولمبياد الكيمياء العربي العاشر، الذي سينعقد في عمان، عاصمة المملكة الأردنية الهاشمية، خلال أغسطس 2025.
+              </p>
+              <p>
+                أولمبياد الكيمياء العربي أكثر من مجرد منافسة، إنه منصة فريدة تتيح للعباقرة الشباب في الكيمياء فرصة للتواصل، والابتكار، واستلهام الأفكار الجديدة. وانطلاقاً من التزامها الراسخ بالتميز العلمي والتطور الأكاديمي، تعتز المملكة الأردنية الهاشمية باستضافة هذا الحدث العربي المميز.
+              </p>
+              <p>
+                بانتظاركم في عمان، حيث يُحوّل روح الاستكشاف والعمل المشترك أولمبياد الكيمياء العربي العاشر إلى تجربة ملهمة. فلنحتفل معاً بمستقبل الكيمياء في الوطن العربي.
+              </p>
+              <div class="welcome-author">
+                <strong>معالي الدكتور عزمي محافظة</strong>
+                <span>وزير التربية والتعليم، المملكة الأردنية الهاشمية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Welcome -->
+          <div class="welcome-card">
+            <div class="welcome-content">
+              <h2>كلمة ترحيبية</h2>
+              <p>
+                يوفّر أولمبياد الكيمياء العربي في دورته العاشرة منصة استثنائية لتحفيز العلماء الشباب وتمكينهم من خلال استقطاب نخبة من الكيميائيين الشباب من مختلف البلدان العربية، يُرسّخ هذا الأولمبياد التزام الأردن بتنمية مهارات الطلبة في المجالات العلمية مثل الكيمياء، وتعزيز شغف الاكتشاف.
+              </p>
+              <p>
+                إن المملكة الأردنية الهاشمية تؤمن بأهمية تمكين الشباب الشغوف بالمعرفة والخبرة ليصبحوا قوة دافعة في مسيرة الابتكار والاكتشاف، وتمكينهم من مواجهة تحديات المستقبل.
+              </p>
+              <p>
+                يُسعدنا استقبال جميع المشاركين في عمان، المدينة التي تُجسد التراث والحداثة، ونتطلع إلى رؤية العقول المبدعة التي ستشكل مستقبل العلوم في العالم العربي.
+              </p>
+              <div class="welcome-author">
+                <strong>الأستاذ الدكتور محمد الزعبي</strong>
+                <span>رئيس الجمعية الكيميائية الأردنية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+      <div class="container">
+        <div class="mission-content">
+          <h2>🌟 رسالتنا</h2>
+          <p class="mission-intro">مسابقات أولمبياد الكيمياء العربي تهدف إلى:</p>
+          <div class="mission-grid">
+            <div class="mission-item">
+              <div class="mission-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>بث الحماس</h3>
+              <p>في نفوس الشباب العربي نحو علم الكيمياء</p>
+            </div>
+            <div class="mission-item">
+              <div class="mission-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>تطوير المهارات</h3>
+              <p>العلمية والعملية للطلبة المتميزين</p>
+            </div>
+            <div class="mission-item">
+              <div class="mission-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3>الإعداد للعالمية</h3>
+              <p>للمشاركة في الأولمبياد الكيميائي الدولي</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competition Info Section -->
+    <section class="competition-section">
+      <div class="container">
+        <div class="competition-content">
+          <h2>🧪 تعريف المسابقة</h2>
+          <p class="competition-intro">
+            مسابقة علمية مخصصة لطلبة المرحلة الثانوية في الوطن العربي، تنقسم إلى:
           </p>
-          <a
-            href="https://forms.gle/dZsh4sgkAaygpve77"
-            target="_blank"
-            class="cta-btn"
-            >رابط التسجيل</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2>حول الاولمبياد العربي العاشر للكيمياء</h2>
-        <p>
-          نحن اللجنة المنظمة لأولمبياد الكيمياء العربي العاشر، نعمل تحت مظلة
-          اتحاد الكيميائيين العرب بالتعاون مع وزارة التربية والتعليم في المملكة
-          الأردنية الهاشمية. نسعى إلى تعزيز روح التنافس العلمي بين طلبة الوطن
-          العربي، وتوفير منصة أكاديمية متميزة لاكتشاف المواهب الواعدة في مجال
-          الكيمياء. نؤمن بأهمية العلم في بناء المستقبل، ونلتزم بتنظيم فعالية
-          تعليمية وتثقيفية عالية المستوى تجمع بين الامتحانات النظرية والتطبيقات
-          العملية والأنشطة الثقافية والسياحية، بما يعكس صورة مشرقة للتعاون
-          العربي في ميدان العلوم.
-        </p>
-
-        <div class="stats">
-          <div class="stat-item">
-            <h3>أهداف الأولمبياد</h3>
-            <p>
-              نهدف إلى تشجيع الطلاب على حب الكيمياء، واكتشاف الطلاب المتميزين،
-              وتقوية العلاقات بين الطلاب العرب من خلال منافسة علمية ممتعة
-              ومفيدة.
-            </p>
-          </div>
-          <div class="stat-item">
-            <h3>المنظمون</h3>
-            <p>
-              ينظم أولمبياد الكيمياء العربي العاشر اتحاد الكيميائيين العرب
-              بالتعاون مع وزارة التربية والتعليم الأردنية والجامعة الأردنية.
-            </p>
-          </div>
-          <div class="stat-item">
-            <h3>المشاركين</h3>
-            <p>
-              يشارك في الأولمبياد العربي العاشر للكيمياء طلاب من مختلف الدول
-              العربية.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Event Schedule -->
-    <section id="schedule" class="schedule">
-      <div class="container">
-        <h2>برنامج الاولمبياد العربي العاشر للكيمياء</h2>
-        <div class="schedule-list">
-          <div class="schedule-item">
-            <div class="date">2025/8/5</div>
-            <div class="event">
-              <h3>استقبال الوفود و التسجيل</h3>
-              <p>الوصول إلى عمان - الأردن</p>
-            </div>
-          </div>
-          <div class="schedule-item">
-            <div class="date">اليوم الأول 2025/8/6</div>
-            <div class="event">
-              <h3>الافتتاح (الجامعة الأردنية)</h3>
-              <div class="schedule-details">
-                <p>10:00 - 10:05 السلام الملكي + أي من الذكر الحكيم</p>
-                <p>10:05 - 10:15 كلمة ترحيب</p>
-                <p>12:00 - 2:00 الجلسة الأولى للامتحان النظري</p>
-                <p>2:15 - 3:30 الغداء</p>
-                <p>3:30 - 8:00 زيارة متحف الحياة البرلمانية والمكتبة الوطنية</p>
-                <p>8:00 - 10:00 العشاء</p>
+          <div class="competition-grid">
+            <div class="competition-track">
+              <div class="track-header">
+                <i class="fas fa-book"></i>
+                <h3>المحور النظري</h3>
               </div>
+              <p>يشمل معلومات في جميع فروع الكيمياء الأساسية والمتقدمة</p>
             </div>
-          </div>
-          <div class="schedule-item">
-            <div class="date">اليوم الثاني 2025/8/7</div>
-            <div class="event">
-              <h3>الامتحان العملي / مختبرات قسم الكيمياء/ الجامعة الأردنية</h3>
-              <div class="schedule-details">
-                <p>9:30 - 1:00 الامتحان العملي</p>
-                <p>1:30 - 3:00 استراحة غداء</p>
-                <p>5:00 - 7:00 حفل اختتام (المركز الثقافي الملكي)</p>
-                <p>7:00 - 9:00 العشاء</p>
+            <div class="competition-track">
+              <div class="track-header">
+                <i class="fas fa-flask"></i>
+                <h3>المحور العملي</h3>
               </div>
+              <p>يقيّم مهارات إجراء التجارب الكيميائية والتحليل المخبري</p>
             </div>
           </div>
-          <div class="schedule-item">
-            <div class="date">اليوم الثالث 2025/8/8</div>
-            <div class="event">
-              <h3>رحلة سياحية - معالم الأردن</h3>
-              <p>جولة استكشافية في المعالم التاريخية والثقافية</p>
+          <div class="participation-info">
+            <p><strong>يُسمح لكل بلد بالمشاركة بـ أربعة طلاب يتم اختيارهم بعد مسابقات وطنية.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <div class="container">
+        <h2>📚 نبذة تاريخية عن الأولمبياد العربي</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2002</div>
+            <div class="timeline-content">
+              <h4>الدورة الأولى</h4>
+              <p>جامعة أسيوط، مصر 🇪🇬</p>
             </div>
           </div>
-          <div class="schedule-item">
-            <div class="date">اليوم الرابع 2025/8/9</div>
-            <div class="event">
-              <h3>مغادرة الوفود</h3>
-              <p>انتهاء فعاليات الأولمبياد والمغادرة</p>
+          <div class="timeline-item">
+            <div class="timeline-year">2004</div>
+            <div class="timeline-content">
+              <h4>الدورة الثانية</h4>
+              <p>جامعة القاهرة، مصر 🇪🇬</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2006</div>
+            <div class="timeline-content">
+              <h4>الدورة الثالثة</h4>
+              <p>الكويت 🇰🇼</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2008</div>
+            <div class="timeline-content">
+              <h4>الدورة الرابعة</h4>
+              <p>الجامعة الأردنية، الأردن 🇯🇴</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2009</div>
+            <div class="timeline-content">
+              <h4>الدورة الخامسة</h4>
+              <p>جامعة الملك عبدالعزيز، السعودية 🇸🇦</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h4>الدورة السادسة</h4>
+              <p>رأس الخيمة، الإمارات 🇦🇪</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2014</div>
+            <div class="timeline-content">
+              <h4>الدورة السابعة</h4>
+              <p>المدينة المنورة، السعودية 🇸🇦</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2017</div>
+            <div class="timeline-content">
+              <h4>الدورة الثامنة</h4>
+              <p>الكويت 🇰🇼</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-content">
+              <h4>الدورة التاسعة</h4>
+              <p>العراق 🇮🇶</p>
+            </div>
+          </div>
+          <div class="timeline-item current">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content">
+              <h4>الدورة العاشرة</h4>
+              <p>الأردن 🇯🇴 - 11 دولة عربية</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Participating Teams -->
-    <section id="teams" class="teams">
+
+    <!-- Jordan Achievements Section -->
+    <section class="achievements-section">
+      <div class="container">
+        <h2>🏆 إنجازات الأردن</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>الجائزة الذهبية 2023</h3>
+            <p>الفوز بالجائزة الذهبية في الأولمبياد العربي التاسع بالعراق</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>الأولمبياد الأردني السادس</h3>
+            <p>إقامة الأولمبياد الكيميائي الأردني بالتعاون مع الجمعية الكيميائية الأردنية وجامعة فيلادلفيا</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>المشاركة الدولية الأولى</h3>
+            <p>المشاركة لأول مرة في أولمبياد الكيمياء الدولي الـ56 والحصول على استثناء للمشاركة بفريق رسمي</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>تشكيل الفريق الوطني</h3>
+            <p>تشكيل الفريق الوطني للكيمياء وتدريبه بالتعاون مع الجمعية الكيميائية والجامعة الأردنية</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Participating Countries Section -->
+    <section class="countries-section">
       <div class="container">
         <h2>الدول المشاركة</h2>
-        <div class="teams-grid">
-          <div class="team-card">
-            <img src="flags/Jordan_flag.png" alt="Jordan Flag" />
+        <div class="countries-grid">
+          <div class="country-card">
+            <img src="flags/Jordan_flag.png" alt="الأردن" class="country-flag">
             <h3>الأردن</h3>
-            <p>الدولة المضيفة</p>
+            <span class="host-badge">الدولة المضيفة</span>
           </div>
-          <div class="team-card">
-            <img src="flags/Iraq_flag.jpg" alt="Iraq Flag" />
-            <h3>العراق</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-          <div class="team-card">
-            <img src="flags/Uae_logo.jpg" alt="UAE Flag" />
-            <h3>الإمارة العربية المتحدة</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-          <div class="team-card">
-            <img src="flags/Syria_flag.jpg" alt="Syria Flag" />
-            <h3>سوريا</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-          <div class="team-card">
-            <img src="flags/Palestinian_flag.jpg" alt="Palestine Flag" />
-            <h3>فلسطين</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-
-          <div class="team-card">
-            <img src="flags/Bahrain_flag.jpg" alt="Bahrain Flag" />
-            <h3>البحرين</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-          <div class="team-card">
-            <img src="flags/Qatar_flag.jpg" alt="Qatar Flag" />
-            <h3>قطر</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-          <div class="team-card">
-            <img src="flags/Saudi_flag.jpg" alt="Saudi Arabia Flag" />
-            <h3>المملكة العربية السعودية</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-
-          <div class="team-card">
-            <img src="flags/Oman_flag.jpg" alt="Oman Flag" />
-            <h3>عمان</h3>
-            <p>الدولة المشاركة</p>
-          </div>
-
-          <div class="team-card">
-            <img src="flags/Egypt_flag.jpg" alt="Egypt Flag" />
+          <div class="country-card">
+            <img src="flags/Egypt_flag.jpg" alt="مصر" class="country-flag">
             <h3>مصر</h3>
-            <p>الدولة المشاركة</p>
+          </div>
+          <div class="country-card">
+            <img src="flags/Saudi_flag.jpg" alt="السعودية" class="country-flag">
+            <h3>السعودية</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Uae_logo.jpg" alt="الإمارات" class="country-flag">
+            <h3>الإمارات</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/kuwait.jpg" alt="الكويت" class="country-flag">
+            <h3>الكويت</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Qatar_flag.jpg" alt="قطر" class="country-flag">
+            <h3>قطر</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Bahrain_flag.jpg" alt="البحرين" class="country-flag">
+            <h3>البحرين</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Oman_flag.jpg" alt="عُمان" class="country-flag">
+            <h3>عُمان</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/lebanon.jpg" alt="لبنان" class="country-flag">
+            <h3>لبنان</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Iraq_flag.jpg" alt="العراق" class="country-flag">
+            <h3>العراق</h3>
+          </div>
+          <div class="country-card">
+            <img src="flags/Palestinian_flag.jpg" alt="فلسطين" class="country-flag">
+            <h3>فلسطين</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Photo/Video Gallery -->
-    <section id="gallery" class="gallery">
+    <!-- About Jordan Section -->
+    <section class="about-jordan-section">
       <div class="container">
-        <h2>معرض الصور</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="gallery/photo1.jpg" alt="Gallery Photo 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="gallery/photo2.jpg" alt="Gallery Photo 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="gallery/photo3.jpg" alt="Gallery Photo 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="gallery/photo4.jpg" alt="Gallery Photo 4" />
-          </div>
-          <div class="gallery-item">
-            <img src="gallery/photo5.jpg" alt="Gallery Photo 5" />
-          </div>
-          <div class="gallery-item">
-            <img src="gallery/photo6.jpg" alt="Gallery Photo 6" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Registration -->
-    <section id="registration" class="registration">
-      <div class="container">
-        <h2>التسجيل</h2>
-        <div class="registration-info">
-          <div class="reg-section registration-form-section">
-            <h3>التسجيل في الأولمبياد</h3>
-            <p>المملكة الأردنية الهاشمية ترحب بكم</p>
-            <p>يرجى تعبئة النموذج الرسمي للتسجيل</p>
-            <div class="form-requirements">
-              <h4>شروط تسجيل الفريق:</h4>
-              <ul>
-                <li>يتكوّن الفريق من طالبين ذكور وطالبتين إناث (إن أمكن)</li>
-                <li>يُسمح بمشاركة مشرفَين تربويين (رجل وامرأة إن أمكن)</li>
-                <li>يجب أن تتراوح أعمار الطلبة بين 15 و18 سنة</li>
-                <li>اسم الدولة المشاركة</li>
-              </ul>
-            </div>
-            <a
-              href="https://forms.gle/dZsh4sgkAaygpve77"
-              target="_blank"
-              class="registration-btn"
-              >انقر هنا للتسجيل الرسمي</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>اتصل بنا</h2>
-        <div class="contact-info">
-          <div class="contact-item">
-            <h3>Address</h3>
-            <p>123 Science Street</p>
-            <p>Amman, Jordan</p>
-          </div>
-          <div class="contact-item">
-            <h3>Email</h3>
-            <p>info@arabchemistry.org</p>
-          </div>
-          <div class="contact-item">
-            <h3>Phone</h3>
-            <p>+962 6 123 4567</p>
-          </div>
-          <div class="contact-item">
-            <h3>Through</h3>
-            <p>Follow us on social media for updates</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
+        <div class="about-jordan-content">
+          <h2>المملكة الأردنية الهاشمية</h2>
+          <p>
+            تفخر المملكة الأردنية الهاشمية، مهد الحضارات ومركز التعليم والثقافة في المنطقة، باستضافة أولمبياد الكيمياء العربي العاشر لعام 2025 في العاصمة عمان. وتشتهر الأردن بجامعاتها المرموقة، ومراكزها البحثية المتقدمة، واهتمامها الكبير بالتعليم العلمي، مما يجعلها الوجهة الأمثل لأفضل المواهب الشابة في مجال الكيمياء.
+          </p>
+          <p>
+            بمزيج فريد من التراث العريق والتقدم الحديث، ومن المواقع الأثرية الشهيرة إلى المؤسسات التعليمية الرائدة، توفر الأردن بيئة مثالية للإبداع والاستكشاف والتعاون العلمي.
+          </p>
+          <p>
+            اكتشف الأردن - ملتقى التاريخ والعلم والابتكار.
+          </p>
+          <a href="travel.html" class="btn btn-primary">معرفة المزيد</a>
         </div>
       </div>
     </section>
@@ -320,7 +430,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>أولمبياد الكيمياء العربي العاشر للكيمياء</h3>
+            <h3>أولمبياد الكيمياء العربي العاشر</h3>
             <p>
               نسعى لتعزيز التنافس العلمي واكتشاف المواهب في الكيمياء من خلال
               فعالية تعليمية تجمع بين الاختبارات والأنشطة الثقافية، بروح التعاون
@@ -330,18 +440,17 @@
           <div class="footer-section">
             <h3>الروابط السريعة</h3>
             <ul>
-              <li><a href="#home">الرئيسية</a></li>
-              <li><a href="#about">حول</a></li>
-              <li><a href="#teams">الدول المشاركة</a></li>
-              <li><a href="#schedule">البرنامج</a></li>
-              <li><a href="#registration">التسجيل</a></li>
-              <li><a href="#gallery">معرض الصور</a></li>
-              <li><a href="#contact">اتصل بنا</a></li>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="about.html">حول الأولمبياد</a></li>
+              <li><a href="schedule.html">البرنامج</a></li>
+              <li><a href="participants.html">المشاركون</a></li>
+              <li><a href="gallery.html">معرض الصور</a></li>
+              <li><a href="contact.html">تواصل معنا</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>معلومات الاتصال</h3>
-            <p>البريد الإلكتروني: info@arabchemistry.org</p>
+            <p>البريد الإلكتروني: Olympiad.chemistry2024@gmail.com</p>
             <p>الهاتف: +962 6 123 4567</p>
           </div>
         </div>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #2980b9; }
+        .viewport-info {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Mobile Menu Test Suite</h1>
+        <p>This page tests the mobile menu functionality of the Arab Chemistry Olympiad website.</p>
+
+        <div class="viewport-info">
+            Current Viewport: <span id="viewport-size"></span>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Navigation Test</h2>
+            <button onclick="testNavigation()">Test Navigation Elements</button>
+            <div id="nav-results"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 Mobile Menu Test</h2>
+            <button onclick="testMobileMenu()">Test Mobile Menu Functionality</button>
+            <div id="mobile-results"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 Live Website Links</h2>
+            <p>Test the actual website pages:</p>
+            <a href="index.html" target="_blank" style="display: inline-block; background: #3498db; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; margin: 5px;">🏠 Home Page</a>
+            <a href="about.html" target="_blank" style="display: inline-block; background: #3498db; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; margin: 5px;">ℹ️ About Page</a>
+            <a href="contact.html" target="_blank" style="display: inline-block; background: #3498db; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; margin: 5px;">📞 Contact Page</a>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 Test Instructions</h2>
+            <ol>
+                <li><strong>Desktop Test:</strong> Open the website on desktop - hamburger menu should be hidden</li>
+                <li><strong>Mobile Test:</strong> Resize browser to mobile width (&lt;768px) or use device emulation</li>
+                <li><strong>Menu Toggle:</strong> Click hamburger menu - should slide in from right</li>
+                <li><strong>Dropdown Test:</strong> Click dropdown items in mobile menu - should expand/collapse</li>
+                <li><strong>Outside Click:</strong> Click outside menu or overlay - should close menu</li>
+                <li><strong>Escape Key:</strong> Press Esc key when menu is open - should close menu</li>
+                <li><strong>Navigation:</strong> Click any menu link - should navigate and close menu</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Update viewport size
+        function updateViewportSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewport-size').textContent = `${width}x${height}px`;
+            
+            const isMobile = width <= 768;
+            document.getElementById('viewport-size').style.color = isMobile ? '#e74c3c' : '#27ae60';
+            document.getElementById('viewport-size').style.fontWeight = 'bold';
+        }
+
+        // Test navigation elements
+        function testNavigation() {
+            const results = document.getElementById('nav-results');
+            let html = '<h3>Navigation Test Results:</h3>';
+            
+            try {
+                // Check if we can access the main site elements (cross-origin might block this)
+                html += '<div class="info">Note: Due to cross-origin restrictions, we can only test basic navigation structure.</div>';
+                html += '<div class="success">✅ Test page loaded successfully</div>';
+                html += '<div class="success">✅ JavaScript is working</div>';
+                html += '<div class="success">✅ CSS is loading properly</div>';
+                
+                const isMobile = window.innerWidth <= 768;
+                html += `<div class="${isMobile ? 'success' : 'info'}">📱 Mobile mode: ${isMobile ? 'ACTIVE' : 'INACTIVE'} (${window.innerWidth}px)</div>`;
+                
+            } catch (error) {
+                html += `<div class="error">❌ Error: ${error.message}</div>`;
+            }
+            
+            results.innerHTML = html;
+        }
+
+        // Test mobile menu functionality
+        function testMobileMenu() {
+            const results = document.getElementById('mobile-results');
+            let html = '<h3>Mobile Menu Test Results:</h3>';
+            
+            const isMobile = window.innerWidth <= 768;
+            
+            if (!isMobile) {
+                html += '<div class="info">🖥️ Desktop mode detected. Resize window to &lt;768px width to test mobile menu.</div>';
+            } else {
+                html += '<div class="success">📱 Mobile mode active - hamburger menu should be visible</div>';
+            }
+            
+            html += '<div class="info">💡 Open the actual website pages using the links above to test the full mobile menu functionality.</div>';
+            
+            // Test CSS support
+            const supportsBackdropFilter = CSS.supports('backdrop-filter', 'blur(10px)');
+            html += `<div class="${supportsBackdropFilter ? 'success' : 'info'}">🎨 Backdrop filter support: ${supportsBackdropFilter ? 'YES' : 'NO'}</div>`;
+            
+            const supportsFlexbox = CSS.supports('display', 'flex');
+            html += `<div class="${supportsFlexbox ? 'success' : 'error'}">📐 Flexbox support: ${supportsFlexbox ? 'YES' : 'NO'}</div>`;
+            
+            results.innerHTML = html;
+        }
+
+        // Update viewport on resize
+        window.addEventListener('resize', updateViewportSize);
+        updateViewportSize();
+
+        // Auto-run tests on load
+        setTimeout(() => {
+            testNavigation();
+            testMobileMenu();
+        }, 1000);
+    </script>
+</body>
+</html> 

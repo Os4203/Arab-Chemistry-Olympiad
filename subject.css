@@ -222,6 +222,39 @@
     60% { transform: translateY(-3px); }
 }
 
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .syllabus-container {
+        max-width: 900px;
+        padding: 90px 20px 40px;
+    }
+    
+    .syllabus-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-card {
+        padding: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        gap: 0.8rem;
+    }
+    
+    .section-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
     .syllabus-container {
         padding: 80px 15px 30px;
@@ -229,13 +262,205 @@
     
     .syllabus-title {
         font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .syllabus-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .syllabus-location {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .section-card {
         padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        gap: 0.7rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .section-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .topic-item {
+        padding: 0.6rem 0;
+        padding-right: 1.5rem;
+        font-size: 0.95rem;
     }
     
     .organic-topics {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .organic-topic {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .back-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .download-section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .download-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .download-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .syllabus-container {
+        padding: 70px 12px 25px;
+    }
+    
+    .syllabus-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+    }
+    
+    .syllabus-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .syllabus-location {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .section-card {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+        border-radius: 12px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    
+    .section-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .subsection {
+        margin-bottom: 1.5rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+    }
+    
+    .topic-item {
+        padding: 0.5rem 0;
+        padding-right: 1.2rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .organic-topic {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .practical-section {
+        text-align: center;
+    }
+    
+    .back-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .download-section {
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+    .download-text {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+    
+    .download-btn {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    
+    .pdf-source {
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+    .syllabus-container {
+        padding: 65px 10px 20px;
+    }
+    
+    .syllabus-title {
+        font-size: 1.4rem;
+    }
+    
+    .section-card {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .subsection-title {
+        font-size: 1rem;
+    }
+    
+    .topic-item {
+        font-size: 0.85rem;
+        padding-right: 1rem;
     }
 }

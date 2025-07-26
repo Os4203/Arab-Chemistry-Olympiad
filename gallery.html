@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - أولمبياد الكيمياء العربي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="Ministry of Education Logo-01.png" alt="Ministry of Education Logo" class="logo">
+                            <span>Olympiad Chemistry Arab 10th</span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">حول الأولمبياد</a>
+                        <div class="dropdown-content">
+                            <a href="about.html">حول الأولمبياد</a>
+                            <a href="organizer.html">المنظمون</a>
+                            <a href="schedule.html">البرنامج</a>
+                            <a href="participants.html">المشاركون</a>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle">المسابقة</a>
+                        <div class="dropdown-content">
+                            <a href="registration.html">التسجيل</a>
+                            <a href="gallery.html" class="active">صور</a>
+                            <a href="results.html">النتائج والتصنيفات</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+              <a href="#" class="dropdown-toggle">المحتوى </a>
+                        <div class="dropdown-content">
+                            <a href="subject.html">المحتوى العلمي</a>
+                            <a href="news.html">الأخبار</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">السفر والإقامة</a>
+                        <div class="dropdown-content">
+                            <a href="travel.html">تفاصيل السفر</a>
+                            <a href="accommodation.html">أماكن الإقامة</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">تواصل معنا</a>
+                        <div class="dropdown-content">
+                            <a href="contact.html">تواصل معنا</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-ministry-logo">
+                    <img src="logo.png" alt="Ministry of Education Logo" class="ministry-logo">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>📸 معرض الصور</h1>
+            <p>مجموعة من الصور التي توثق فعاليات وأنشطة أولمبياد الكيمياء العربي</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>معرض الصور</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <main class="gallery-content">
+        <div class="container">
+            <!-- Gallery Stats -->
+            <div class="gallery-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>13</h3>
+                        <p>صورة في المعرض</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2025</h3>
+                        <p>أولمبياد الكيمياء العربي</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>الأردن</h3>
+                        <p>الدولة المضيفة</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <h2>تصفح الصور</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">جميع الصور</button>
+                    <button class="filter-btn" data-filter="events">الفعاليات</button>
+                    <button class="filter-btn" data-filter="labs">المختبرات</button>
+                    <button class="filter-btn" data-filter="participants">المشاركون</button>
+                </div>
+            </div>
+
+            <!-- Photo Gallery Grid -->
+            <div class="photo-gallery">
+                <div class="gallery-grid">
+                    <!-- Photo 1 -->
+                    <div class="photo-item events" data-category="events">
+                        <div class="photo-container">
+                            <img src="gallary/Picture1.png" alt="فعاليات أولمبياد الكيمياء العربي" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>فعاليات الأولمبياد</h4>
+                                    <p>لحظات مميزة من تنظيم الفعالية</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture1.png', 'فعاليات أولمبياد الكيمياء العربي')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="photo-item labs" data-category="labs">
+                        <div class="photo-container">
+                            <img src="gallary/Picture2.png" alt="المختبرات العلمية" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>المختبرات العلمية</h4>
+                                    <p>أحدث المعدات والتقنيات</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture2.png', 'المختبرات العلمية')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="photo-item participants" data-category="participants">
+                        <div class="photo-container">
+                            <img src="gallary/Picture3.png" alt="المشاركون من الدول العربية" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>المشاركون</h4>
+                                    <p>طلاب متميزون من الوطن العربي</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture3.png', 'المشاركون من الدول العربية')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="photo-item events" data-category="events">
+                        <div class="photo-container">
+                            <img src="gallary/Picture4.png" alt="حفل الافتتاح" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>حفل الافتتاح</h4>
+                                    <p>بداية رسمية للأولمبياد</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture4.png', 'حفل الافتتاح')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="photo-item labs" data-category="labs">
+                        <div class="photo-container">
+                            <img src="gallary/Picture5.png" alt="التجارب العملية" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>التجارب العملية</h4>
+                                    <p>الطلاب أثناء إجراء التجارب</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture5.png', 'التجارب العملية')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="photo-item participants" data-category="participants">
+                        <div class="photo-container">
+                            <img src="gallary/Picture6.png" alt="فرق المشاركين" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>فرق المشاركين</h4>
+                                    <p>التعاون والعمل الجماعي</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture6.png', 'فرق المشاركين')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7 -->
+                    <div class="photo-item events" data-category="events">
+                        <div class="photo-container">
+                            <img src="gallary/Picture7.png" alt="المحاضرات العلمية" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>المحاضرات العلمية</h4>
+                                    <p>خبراء في علوم الكيمياء</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture7.png', 'المحاضرات العلمية')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8 -->
+                    <div class="photo-item labs" data-category="labs">
+                        <div class="photo-container">
+                            <img src="gallary/Picture8.jpg" alt="أدوات المختبر" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>أدوات المختبر</h4>
+                                    <p>معدات علمية متطورة</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture8.jpg', 'أدوات المختبر')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9 -->
+                    <div class="photo-item participants" data-category="participants">
+                        <div class="photo-container">
+                            <img src="gallary/Picture9.jpg" alt="لحظات التتويج" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>لحظات التتويج</h4>
+                                    <p>تكريم المتميزين</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture9.jpg', 'لحظات التتويج')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 10 -->
+                    <div class="photo-item events" data-category="events">
+                        <div class="photo-container">
+                            <img src="gallary/Picture10.jpg" alt="الأنشطة الثقافية" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>الأنشطة الثقافية</h4>
+                                    <p>تعرف على الثقافة الأردنية</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture10.jpg', 'الأنشطة الثقافية')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 11 -->
+                    <div class="photo-item participants" data-category="participants">
+                        <div class="photo-container">
+                            <img src="gallary/Picture11.jpg" alt="روح الفريق" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>روح الفريق</h4>
+                                    <p>التنافس الشريف والصداقة</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture11.jpg', 'روح الفريق')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 12 -->
+                    <div class="photo-item labs" data-category="labs">
+                        <div class="photo-container">
+                            <img src="gallary/Picture12.png" alt="نتائج التجارب" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>نتائج التجارب</h4>
+                                    <p>تحليل البيانات والنتائج</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture12.png', 'نتائج التجارب')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 13 -->
+                    <div class="photo-item events" data-category="events">
+                        <div class="photo-container">
+                            <img src="gallary/Picture13.jpg" alt="حفل الختام" class="gallery-image">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>حفل الختام</h4>
+                                    <p>ختام مميز للأولمبياد</p>
+                                </div>
+                                <button class="view-btn" onclick="openLightbox('gallary/Picture13.jpg', 'حفل الختام')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+            </div>
+            <div class="lightbox-navigation">
+                <button class="nav-btn prev-btn" onclick="previousImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="nav-btn next-btn" onclick="nextImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>أولمبياد الكيمياء العربي العاشر</h3>
+                    <p>نسعى لتعزيز التنافس العلمي واكتشاف المواهب في الكيمياء من خلال فعالية تعليمية تجمع بين الاختبارات والأنشطة الثقافية، بروح التعاون العربي.</p>
+                </div>
+                          <div class="footer-section">
+            <h3>الروابط السريعة</h3>
+            <ul>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="about.html">حول الأولمبياد</a></li>
+              <li><a href="schedule.html">البرنامج</a></li>
+              <li><a href="participants.html">المشاركون</a></li>
+              <li><a href="gallery.html">معرض الصور</a></li>
+              <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <p>البريد الإلكتروني: Olympiad.chemistry2024@gmail.com</p>
+                    <p>الهاتف: +962 6 123 4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arab Chemistry Olympiad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery functionality
+        let currentImageIndex = 0;
+        const images = [
+            { src: 'gallary/Picture1.png', title: 'فعاليات أولمبياد الكيمياء العربي' },
+            { src: 'gallary/Picture2.png', title: 'المختبرات العلمية' },
+            { src: 'gallary/Picture3.png', title: 'المشاركون من الدول العربية' },
+            { src: 'gallary/Picture4.png', title: 'حفل الافتتاح' },
+            { src: 'gallary/Picture5.png', title: 'التجارب العملية' },
+            { src: 'gallary/Picture6.png', title: 'فرق المشاركين' },
+            { src: 'gallary/Picture7.png', title: 'المحاضرات العلمية' },
+            { src: 'gallary/Picture8.jpg', title: 'أدوات المختبر' },
+            { src: 'gallary/Picture9.jpg', title: 'لحظات التتويج' },
+            { src: 'gallary/Picture10.jpg', title: 'الأنشطة الثقافية' },
+            { src: 'gallary/Picture11.jpg', title: 'روح الفريق' },
+            { src: 'gallary/Picture12.png', title: 'نتائج التجارب' },
+            { src: 'gallary/Picture13.jpg', title: 'حفل الختام' }
+        ];
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const photoItems = document.querySelectorAll('.photo-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter photos
+                    photoItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(imageSrc, imageTitle) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            
+            currentImageIndex = images.findIndex(img => img.src === imageSrc);
+            
+            lightboxImage.src = imageSrc;
+            lightboxTitle.textContent = imageTitle;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateLightboxImage();
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            
+            lightboxImage.src = images[currentImageIndex].src;
+            lightboxTitle.textContent = images[currentImageIndex].title;
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                nextImage();
+            } else if (e.key === 'ArrowRight') {
+                previousImage();
+            }
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النتائج - أولمبياد الكيمياء العربي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header Navigation -->
+     <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="Ministry of Education Logo-01.png" alt="Ministry of Education Logo" class="logo">
+                            <span>Olympiad Chemistry Arab 10th</span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">حول الأولمبياد</a>
+                        <div class="dropdown-content">
+                            <a href="about.html">حول الأولمبياد</a>
+                            <a href="organizer.html">المنظمون</a>
+                            <a href="schedule.html">البرنامج</a>
+                            <a href="participants.html">المشاركون</a>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle">المسابقة</a>
+                        <div class="dropdown-content">
+                            <a href="registration.html">التسجيل</a>
+                            <a href="gallery.html" class="active">صور</a>
+                            <a href="results.html">النتائج والتصنيفات</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">المحتوى </a>
+                        <div class="dropdown-content">
+                            <a href="subject.html">المحتوى العلمي</a>
+                            <a href="news.html">الأخبار</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">السفر والإقامة</a>
+                        <div class="dropdown-content">
+                            <a href="travel.html">تفاصيل السفر</a>
+                            <a href="accommodation.html">أماكن الإقامة</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">تواصل معنا</a>
+                        <div class="dropdown-content">
+                            <a href="contact.html">تواصل معنا</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-ministry-logo">
+                    <img src="logo.png" alt="Ministry of Education Logo" class="ministry-logo">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>النتائج</h1>
+                <p>نتائج أولمبياد الكيمياء العربي</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span>></span>
+                    <span>النتائج</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-wrapper">
+        <div class="container">
+            <!-- Announcement Banner -->
+            <div class="announcement-banner">
+                <div class="banner-content">
+                    <div class="banner-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="banner-text">
+                        <h2>إعلان هام</h2>
+                        <p>سيتم الإعلان عن النتائج قريباً</p>
+                        <p class="banner-subtitle">An announcement will be made soon</p>
+                    </div>
+                    <div class="banner-decoration">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+            </div>
+
+          
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>أولمبياد الكيمياء العربي</h3>
+                    <p>مسابقة علمية تهدف إلى تطوير مهارات الطلاب في علم الكيمياء وتشجيع التفوق الأكاديمي في المنطقة العربية.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط مفيدة</h3>
+                    <ul>
+                        <li><a href="about.html">عن الأولمبياد</a></li>
+                        <li><a href="schedule.html">الجدول الزمني</a></li>
+                        <li><a href="participants.html">المشاركون</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p>البريد الإلكتروني: info@arabchemistryolympiad.org</p>
+                    <p>الهاتف: +962 6 123 4567</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 أولمبياد الكيمياء العربي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <style>
+        /* Results Page Specific Styles */
+        .announcement-banner {
+            background: linear-gradient(135deg, #2c5aa0 0%, #4a7bc8 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(44, 90, 160, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcement-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffffff, #ffd700, #ffffff);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .banner-text h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .banner-text p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .banner-subtitle {
+            font-size: 1.1rem !important;
+            opacity: 0.8 !important;
+            font-style: italic;
+        }
+
+        .banner-decoration {
+            font-size: 4rem;
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .coming-soon-banner {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 4px solid #f39c12;
+        }
+
+        .animated-icon {
+            font-size: 3rem;
+            color: #f39c12;
+            margin-bottom: 1rem;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .coming-soon-content h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-content p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .status-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .status-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background: #27ae60;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .status-text {
+            color: #666;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .info-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2c5aa0;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-card .card-icon {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .timeline-banner {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-right: 4px solid #27ae60;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-header h3 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        .timeline-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .step.completed {
+            background: #e8f5e8;
+            border: 2px solid #27ae60;
+        }
+
+        .step.active {
+            background: #fff3cd;
+            border: 2px solid #f39c12;
+        }
+
+        .step.pending {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step.completed .step-icon {
+            background: #27ae60;
+            color: white;
+        }
+
+        .step.active .step-icon {
+            background: #f39c12;
+            color: white;
+        }
+
+        .step.pending .step-icon {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .step-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .step-content p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .stay-updated-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .update-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .update-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .update-text {
+            flex: 1;
+        }
+
+        .update-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .update-text p {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .update-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .update-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .banner-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .banner-decoration {
+                position: static;
+                opacity: 0.3;
+                font-size: 3rem;
+            }
+
+            .banner-text h2 {
+                font-size: 1.6rem;
+            }
+
+            .banner-text p {
+                font-size: 1.1rem;
+            }
+
+            .timeline-steps {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .step {
+                flex-direction: row;
+                text-align: right;
+                padding: 1rem;
+            }
+
+            .step-icon {
+                margin-bottom: 0;
+                margin-left: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .update-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .update-btn {
+                align-self: center;
+            }
+
+            .info-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .announcement-banner,
+            .coming-soon-banner,
+            .timeline-banner,
+            .stay-updated-banner {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .banner-text h2 {
+                font-size: 1.4rem;
+            }
+
+            .banner-text p {
+                font-size: 1rem;
+            }
+
+            .timeline-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .step {
+                padding: 0.8rem;
+            }
+
+            .step-content h4 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</body>
+</html> 
