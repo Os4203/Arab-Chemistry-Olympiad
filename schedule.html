@@ -52,6 +52,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle">المحتوى </a>
               <div class="dropdown-content">
+                <a href="subject.html">المحتوى العلمي</a>
                 <a href="news.html">الأخبار</a>
               </div>
             </li>
@@ -77,8 +78,8 @@
           <div class="nav-ministry-logo">
             <img
               src="logo.png"
-                                          alt="Ministry of Education Logo"
-            class="ministry-logo"
+              alt="Ministry of Education Logo"
+              class="ministry-logo"
             />
           </div>
         </div>
@@ -104,6 +105,29 @@
           <div class="main-content">
             <div class="content-card">
               <h2>برنامج الاولمبياد العربي العاشر للكيمياء</h2>
+
+              <!-- Download Buttons Section -->
+              <div class="download-section">
+                <div class="download-buttons">
+                  <a
+                    href="اجندة اولمبياد الكيمياء.pdf"
+                    class="download-btn primary-btn"
+                    target="_blank"
+                  >
+                    <i class="fas fa-download"></i>
+                    <span>تحميل اجندة اولمبياد الكيمياء</span>
+                  </a>
+                  <a
+                    href="برنامح الاولمبياد.pdf"
+                    class="download-btn secondary-btn"
+                    target="_blank"
+                  >
+                    <i class="fas fa-file-pdf"></i>
+                    <span>تحميل برنامج الاولمبياد PDF</span>
+                  </a>
+                </div>
+              </div>
+
               <div class="schedule-list">
                 <div class="schedule-item">
                   <div class="date">2025/8/5</div>
@@ -182,7 +206,7 @@
                 <i class="fas fa-users"></i>
                 <div>
                   <strong>المشاركون</strong>
-                  <p>10 دول عربية</p>
+                  <p>11 دول عربية</p>
                 </div>
               </div>
             </div>
@@ -225,7 +249,7 @@
           <div class="footer-section">
             <h3>معلومات الاتصال</h3>
             <p>البريد الإلكتروني: Olympiad.chemistry2024@gmail.com</p>
-            <p>الهاتف: +962 6 123 4567</p>
+            <p>الهاتف: <span dir="ltr">+962 6 123 4567</span></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -233,6 +257,106 @@
         </div>
       </div>
     </footer>
+
+    <style>
+      /* Download Buttons Styling */
+      .download-section {
+        margin: 2rem 0 3rem 0;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        border: 1px solid #dee2e6;
+      }
+
+      .download-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        min-width: 250px;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .primary-btn {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+      }
+
+      .primary-btn:hover {
+        background: linear-gradient(135deg, #0056b3, #004085);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+        color: white;
+        text-decoration: none;
+      }
+
+      .secondary-btn {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+      }
+
+      .secondary-btn:hover {
+        background: linear-gradient(135deg, #20c997, #17a2b8);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        color: white;
+        text-decoration: none;
+      }
+
+      .download-btn i {
+        font-size: 1.2rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .download-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .download-btn {
+          min-width: 200px;
+          padding: 0.875rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .download-section {
+          margin: 1.5rem 0 2rem 0;
+          padding: 1.5rem;
+        }
+      }
+
+      /* Animation Effects */
+      .download-btn {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
 
     <script src="script.js"></script>
   </body>

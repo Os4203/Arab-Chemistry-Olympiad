@@ -247,7 +247,7 @@
           <div class="footer-section">
             <h3>معلومات الاتصال</h3>
             <p>البريد الإلكتروني: Olympiad.chemistry2024@gmail.com</p>
-            <p>الهاتف: +962 6 123 4567</p>
+            <p>الهاتف: <span dir="ltr">+962 6 123 4567</span></p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -433,6 +433,82 @@
 
       .date-item:hover .date-icon {
         transform: scale(1.1);
+      }
+    </style>
+
+    <style>
+      /* Help Button Styling - Matching Useful Links Design */
+      .help-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        color: #2c3e50;
+        text-decoration: none !important;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        background: rgba(52, 152, 219, 0.08);
+        border: 1px solid rgba(52, 152, 219, 0.2);
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        margin-top: 1.5rem;
+      }
+
+      .help-btn::before {
+        content: '←';
+        color: #3498db;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+        order: 2;
+      }
+
+      .help-btn:hover {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white !important;
+        transform: translateX(-3px);
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        border-color: #3498db;
+      }
+
+      .help-btn:hover::before {
+        color: white;
+        transform: translateX(-3px);
+      }
+
+      .help-btn i {
+        color: #3498db;
+        font-size: 1.1rem;
+        margin-left: 8px;
+        transition: color 0.3s ease;
+      }
+
+      .help-btn:hover i {
+        color: white;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .help-btn {
+          padding: 10px 14px;
+          font-size: 0.9rem;
+        }
+        
+        .help-btn i {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .help-btn {
+          padding: 8px 12px;
+          font-size: 0.85rem;
+        }
+        
+        .help-btn i {
+          font-size: 0.9rem;
+        }
       }
     </style>
 
