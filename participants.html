@@ -75,7 +75,7 @@
                     <img
                       src="logo.png"
                                                           alt="Ministry of Education Logo"
-            class="ministry-logo"
+            class="logo"
                     />
                 </div>
             </div>
@@ -107,7 +107,7 @@
                             <div class="teams-grid">
                                 <div class="team-card host-country-card">
                                     <img src="flags/Jordan_flag.png" alt="Jordan Flag" />
-                                    <h3>الأردن</h3>
+                                    <h3>المملكة الأردنية الهاشمية</h3>
                                     <p class="host-label">الدولة المضيفة</p>
                                 </div>
                                 <div class="team-card">
@@ -132,7 +132,7 @@
                                 </div>
                                 <div class="team-card">
                                     <img src="flags/Saudi_flag.jpg" alt="Saudi Arabia Flag" />
-                                    <h3>المملكة العربية السعودية</h3>
+                                    <h3>  السعودية</h3>
                                     <p>الدولة المشاركة</p>
                                 </div>
                                 <div class="team-card">
@@ -310,11 +310,35 @@
         }
 
         .team-card img {
-            transition: transform 0.3s ease;
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px;
         }
 
         .team-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            border-color: #ffd700;
+        }
+
+        /* Special styling for host country flag */
+        .host-country-card img {
+            border-color: #ff6b35;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .host-country-card:hover img {
+            border-color: #ff6b35;
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
         }
 
         /* Statistics Enhancement */
@@ -337,6 +361,25 @@
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.9;
+        }
+
+        /* Host flag in sidebar */
+        .host-flag {
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #ff6b35;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px;
+        }
+
+        .host-flag:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
         }
     </style>
 
