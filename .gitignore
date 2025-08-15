@@ -22,4 +22,5 @@ Thumbs.db
 *.swo
 
 # Log files
-*.log 
+*.log *.mp4
+*.xlsx

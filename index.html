@@ -90,6 +90,17 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-background">
+        <video autoplay muted loop playsinline class="hero-video" id="heroVideo" preload="auto">
+          <source src="chemistry_olympiad.mp4" type="video/mp4">
+          <source src="video.mp4" type="video/mp4">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          <!-- Fallback content -->
+          <div style="color: white; text-align: center; padding: 2rem; background: rgba(255,0,0,0.1); border: 2px solid red;">
+            <h3>🎬 Video Debug Info</h3>
+            <p>If you see this text, the video is not loading.</p>
+            <p>Please rename your video file from Arabic to English: "chemistry_olympiad.mp4"</p>
+          </div>
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <div class="container">
@@ -182,10 +193,15 @@
                 </div>
               </div>
               <div class="hero-buttons">
-                <a href="registration.html" class="btn btn-primary"
-                  >سجِّل الآن</a
-                >
-                <a href="schedule.html" class="btn btn-secondary">البرنامج</a>
+                <a href="registration.html" class="btn btn-primary">
+                  <span>سجِّل الآن</span>
+                </a>
+                <a href="schedule.html" class="btn btn-secondary">
+                  <span>البرنامج</span>
+                </a>
+                <a href="https://forms.gle/tcKQrqsNEta3ScLg6" class="btn btn-secondary" target="_blank">
+                  <span>التقييم</span>
+                </a>
               </div>
             </div>
           </div>
@@ -249,6 +265,59 @@
               <div class="welcome-author">
                 <strong> الأستاذ الدكتورة عبير البوّاب</strong>
                 <span>رئيس الجمعية الكيميائية الأردنية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Video Section -->
+    <section class="featured-video-section">
+      <div class="container">
+        <div class="video-content">
+          <div class="section-header">
+            <h2>🎬 شاهد أولمبياد الكيمياء العربي</h2>
+            <p class="section-subtitle">
+              استمتع بمشاهدة لحظات مميزة من رحلة الإبداع والتميز العلمي في عالم الكيمياء
+            </p>
+          </div>
+          <div class="video-wrapper">
+            <div class="video-container">
+              <video 
+                controls 
+                preload="metadata" 
+                class="featured-video" 
+                id="featuredVideo"
+                poster=""
+              >
+                <source src="chemistry_olympiad_2.mp4" type="video/mp4">
+                
+                <p class="video-fallback">
+                  عذراً، متصفحك لا يدعم تشغيل الفيديو. 
+                  <a href="chemistry_olympiad_2.mp4" download>يمكنك تحميل الفيديو من هنا</a>
+                </p>
+              </video>
+            </div>
+            <div class="video-description">
+              <h3>لحظات من التميز العلمي</h3>
+              <p>
+                شاهد أبرز اللحظات والفعاليات من أولمبياد الكيمياء العربي، حيث يجتمع أذكى العقول 
+                الشابة من الوطن العربي للتنافس والإبداع في عالم الكيمياء الرائع.
+              </p>
+              <div class="video-stats">
+                <div class="stat-item">
+                  <i class="fas fa-users"></i>
+                  <span>مشاركون من 11 دولة عربية</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fas fa-trophy"></i>
+                  <span>منافسة علمية عالية المستوى</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fas fa-flask"></i>
+                  <span>تجارب عملية متقدمة</span>
+                </div>
               </div>
             </div>
           </div>

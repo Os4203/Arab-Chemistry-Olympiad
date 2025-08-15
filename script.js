@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScrolling();
     initializeAnimations();
     initializeContactForm();
+    initializeVideoBackground();
+    initializeFeaturedVideo();
 });
 
 /**
@@ -449,6 +451,357 @@ function initializePageSpecific() {
 
 // Initialize page-specific functionality
 document.addEventListener('DOMContentLoaded', initializePageSpecific);
+
+/**
+ * Initialize featured video functionality
+ */
+function initializeFeaturedVideo() {
+    const video = document.getElementById('featuredVideo');
+    const customPlayBtn = document.getElementById('customPlayBtn');
+    const videoOverlay = document.querySelector('.video-overlay-info');
+    
+    if (!video) {
+        // Featured video only exists on homepage, silently skip on other pages
+        return;
+    }
+    
+    if (!customPlayBtn) {
+        // Custom play button was removed, silently skip
+        return;
+    }
+    
+    console.log('Initializing featured video functionality...');
+    console.log('Video element:', video);
+    console.log('Custom play button:', customPlayBtn);
+    console.log('Video overlay:', videoOverlay);
+    
+    // Update button state
+    function updateButtonState() {
+        const icon = customPlayBtn.querySelector('i');
+        if (!icon) {
+            console.error('Play button icon not found!');
+            return;
+        }
+        
+        if (video.paused || video.ended) {
+            icon.className = 'fas fa-play';
+            if (videoOverlay) videoOverlay.style.opacity = '1';
+            // Enable pulse animation when paused
+            customPlayBtn.style.animation = 'playButtonPulse 2s ease-in-out infinite';
+            console.log('Button state: PLAY (paused:', video.paused, ', ended:', video.ended, ')');
+        } else {
+            icon.className = 'fas fa-pause';
+            if (videoOverlay) videoOverlay.style.opacity = '0';
+            // Disable pulse animation when playing
+            customPlayBtn.style.animation = 'none';
+            console.log('Button state: PAUSE (playing)');
+        }
+    }
+    
+    // Custom play button click handler
+    customPlayBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Custom play button clicked, video paused:', video.paused);
+        
+        if (video.paused || video.ended) {
+            video.play().then(() => {
+                updateButtonState();
+                console.log('Video play started successfully');
+            }).catch((error) => {
+                console.error('Error playing video:', error);
+            });
+        } else {
+            video.pause();
+            updateButtonState();
+            console.log('Video paused successfully');
+        }
+    });
+    
+    // Video event listeners
+    video.addEventListener('play', function() {
+        console.log('Featured video started playing');
+        updateButtonState();
+    });
+    
+    video.addEventListener('pause', function() {
+        console.log('Featured video paused');
+        updateButtonState();
+    });
+    
+    video.addEventListener('ended', function() {
+        console.log('Featured video ended');
+        updateButtonState();
+    });
+    
+    // Video loading events
+    video.addEventListener('loadstart', function() {
+        console.log('Featured video loading started');
+    });
+    
+    video.addEventListener('loadeddata', function() {
+        console.log('Featured video data loaded');
+    });
+    
+    video.addEventListener('canplay', function() {
+        console.log('Featured video can start playing');
+    });
+    
+    video.addEventListener('error', function(e) {
+        console.error('Featured video error:', e);
+        console.error('Video error code:', video.error ? video.error.code : 'Unknown');
+        
+        // Show fallback message
+        const fallbackMsg = video.querySelector('.video-fallback');
+        if (fallbackMsg) {
+            fallbackMsg.style.display = 'block';
+            fallbackMsg.style.padding = '2rem';
+            fallbackMsg.style.textAlign = 'center';
+            fallbackMsg.style.background = 'rgba(255, 0, 0, 0.1)';
+            fallbackMsg.style.border = '2px solid #ff6b6b';
+            fallbackMsg.style.borderRadius = '10px';
+            fallbackMsg.style.color = 'white';
+        }
+    });
+    
+    // Video container interactions
+    const videoContainer = document.querySelector('.video-container');
+    if (videoContainer) {
+        // Show overlay when hovering over video container
+        videoContainer.addEventListener('mouseenter', function() {
+            if (video.paused || video.ended) {
+                videoOverlay.style.opacity = '1';
+            }
+        });
+        
+        // Hide overlay when leaving (only if video is playing)
+        videoContainer.addEventListener('mouseleave', function() {
+            if (!video.paused && !video.ended) {
+                videoOverlay.style.opacity = '0';
+            }
+        });
+        
+        // Click anywhere on video to play/pause (in addition to the button)
+        video.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (video.paused || video.ended) {
+                video.play().then(() => {
+                    updateButtonState();
+                }).catch((error) => {
+                    console.error('Error playing video via video click:', error);
+                });
+            } else {
+                video.pause();
+                updateButtonState();
+            }
+        });
+    }
+    
+    // Initialize button state on load
+    updateButtonState();
+    
+    // Keyboard controls for accessibility
+    video.addEventListener('keydown', function(e) {
+        switch(e.code) {
+            case 'Space':
+                e.preventDefault();
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                video.currentTime += 10; // Skip forward 10 seconds
+                break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                video.currentTime -= 10; // Skip backward 10 seconds
+                break;
+        }
+    });
+    
+    // Make video focusable for keyboard navigation
+    video.setAttribute('tabindex', '0');
+    
+    console.log('Featured video initialization complete');
+    
+    // Debug function for testing (can be called from console)
+    window.testVideoButton = function() {
+        console.log('=== VIDEO BUTTON DEBUG TEST ===');
+        console.log('Video paused:', video.paused);
+        console.log('Video ended:', video.ended);
+        console.log('Button element:', customPlayBtn);
+        console.log('Overlay element:', videoOverlay);
+        console.log('Button icon:', customPlayBtn.querySelector('i'));
+        console.log('Video src:', video.currentSrc);
+        console.log('=== END DEBUG TEST ===');
+        
+        // Try to toggle video manually
+        if (video.paused || video.ended) {
+            console.log('Attempting to play video...');
+            video.play();
+        } else {
+            console.log('Attempting to pause video...');
+            video.pause();
+        }
+    };
+    
+    console.log('Run testVideoButton() in console to debug the video controls');
+}
+
+/**
+ * Initialize video background (no controls) - Enhanced debugging version
+ */
+function initializeVideoBackground() {
+    const video = document.getElementById('heroVideo');
+    
+    if (!video) {
+        // Video element only exists on homepage, silently skip on other pages
+        return;
+    }
+    
+    console.log('Video element found, initializing...');
+    console.log('Video element:', video);
+    console.log('Video src:', video.currentSrc || video.src);
+    
+    // Video is working properly, no debugging needed
+    
+    // Check video readiness
+    video.addEventListener('loadstart', function() {
+        console.log('Video loading started');
+    });
+    
+    video.addEventListener('loadeddata', function() {
+        console.log('Video data loaded');
+    });
+    
+    video.addEventListener('loadedmetadata', function() {
+        console.log('Video metadata loaded successfully');
+        console.log('Video duration:', video.duration);
+        console.log('Video dimensions:', video.videoWidth + 'x' + video.videoHeight);
+    });
+    
+    video.addEventListener('canplay', function() {
+        console.log('Video can start playing');
+        video.play().catch(e => {
+            console.warn('Video auto-play failed:', e);
+        });
+    });
+    
+    video.addEventListener('canplaythrough', function() {
+        console.log('Video can play through without buffering');
+    });
+    
+    video.addEventListener('play', function() {
+        console.log('Video started playing');
+    });
+    
+    video.addEventListener('playing', function() {
+        console.log('Video is actually playing now');
+    });
+    
+    video.addEventListener('pause', function() {
+        console.log('Video paused');
+    });
+    
+    video.addEventListener('ended', function() {
+        console.log('Video ended');
+    });
+    
+    // Handle video loading errors with detailed info
+    video.addEventListener('error', function(e) {
+        console.error('Video loading error:', e);
+        console.error('Video error code:', video.error?.code);
+        console.error('Video error message:', video.error?.message);
+        console.error('Check if the video file "أولمبياد الكيمياء.mp4" exists in the project root');
+        
+        // Show fallback background
+        const heroBackground = document.querySelector('.hero-background');
+        if (heroBackground) {
+            heroBackground.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+        }
+    });
+    
+    video.addEventListener('stalled', function() {
+        console.warn('Video playback stalled');
+    });
+    
+    video.addEventListener('waiting', function() {
+        console.log('Video is waiting for data');
+    });
+    
+    // Try multiple approaches to start video
+    const attemptPlay = () => {
+        if (video.paused) {
+            console.log('Attempting to play video...');
+            video.play().then(() => {
+                console.log('Video play successful');
+            }).catch(e => {
+                console.warn('Video play failed:', e.message);
+                // Try with user interaction
+                if (e.name === 'NotAllowedError') {
+                    console.log('Adding click-to-play functionality...');
+                    const playHandler = () => {
+                        video.play().then(() => {
+                            console.log('Video started after user interaction');
+                        }).catch(err => {
+                            console.error('Video still failed after user interaction:', err);
+                        });
+                        document.removeEventListener('click', playHandler);
+                        document.removeEventListener('touchstart', playHandler);
+                    };
+                    document.addEventListener('click', playHandler);
+                    document.addEventListener('touchstart', playHandler);
+                }
+            });
+        }
+    };
+    
+    // Try to play immediately
+    attemptPlay();
+    
+    // Try again after a delay
+    setTimeout(attemptPlay, 1000);
+    
+    // Try again after another delay
+    setTimeout(attemptPlay, 3000);
+    
+    // Pause video when it's not visible (for performance)
+    if ('IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Video is visible, attempting play');
+                    attemptPlay();
+                } else {
+                    console.log('Video is not visible, pausing');
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+        
+        videoObserver.observe(video);
+    }
+    
+    // Handle page visibility changes
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            video.pause();
+        } else {
+            console.log('Page visible again, attempting video play');
+            attemptPlay();
+        }
+    });
+    
+    // Optimize for mobile devices
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        console.log('Mobile device detected, applying optimizations');
+        video.style.filter = 'brightness(0.6) contrast(1.0)';
+        video.playbackRate = 0.9;
+    }
+}
 
 // Error handling for global errors
 window.addEventListener('error', function(e) {
